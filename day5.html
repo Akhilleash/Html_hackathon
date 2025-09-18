@@ -49,5 +49,182 @@
 </table>
 <hr>
 </header>
+<h1><font color="white">📝 Forms in HTML</font></h1>
+<hr>
+<center>
+<h1><font color="Red">What are forms?</font></h1>
+</center><hr>
+<h2><font color="white">The First Principle: The Web Needs to Be a Two-Way Street
+<br><br>
+The fundamental truth is that a website isn't just a brochure for you to read. For the web to be useful, 
+<br><br>
+it needs a way to **collect information *from* the user** 
+<br><br>
+and send it back to the server.
+<br><br>
+Without this, you couldn't log in, search for a video, buy a product, post a comment, or send a message. The web would be a read-only library.
+<br><br>
+The Core Problem
+<br><br>
+How do we create a standardized, reliable system to:
+<br><br>
+<ol>
+<li> Display interactive fields for a user to fill in (text boxes, checkboxes, dropdowns).</li>
+<br><br>
+<li> Packagethe user's data neatly.</li>
+<br><br>
+<li> Send that package to a specific destination on a server.</li>
+<br><br>
+<li> Tell the server how the data is being sent.</li>
+<br><br></ol>
+The logical solution to this entire problem is the HTML  <"form">.
+<br><br>
+</font></h2>
+<hr><h1><font color="red">How do I Implement forms? (Input tag)</font></h1><hr>
+<h2><font color="white">&lt;input&gt; This is the most common form tag. It's a self-closing tag that creates an input field. Its behavior changes based on its type attribute.
+<br>
+<h3> Basic Role</h3>
+<p>
+- &lt;input&gt; is a self-closing tag. <br>
+- It collects data from the user. <br>
+- That data is usually sent to a server when the form is submitted.
+</p><hr>
+<h3><font color="red"> The "type" Attribute</font></h3><hr>
+<details>
+  <summary><b>Text Field</b></summary>
+  <p>
+    <h3>A single-line input for normal text.</h3>
+  Code: &lt;input type="text" name="username"&gt; <br>
+  Working: <br>
+  <font color="white"><input type="text" name="username"></font>
+  </p>
+</details>
+<hr>
+<details>
+  <summary><b>Password Field</b></summary>
+  <p>  <h3>Hides typed characters (for passwords)</h3>
+  Code: &lt;input type="password" name="pass"&gt; <br>
+  Working: <br>
+  <font color="white"><input type="password" name="pass"></font>
+  </p>
+</details>
+<hr>
+<details>
+  <summary><b>Email Field</b></summary>
+  <p>  <h3>Accepts only valid email addresses</h3>
+  Code: &lt;input type="email" name="email"&gt; <br>
+  Working: <br>
+  <font color="white"><input type="email" name="email"></font>
+  </p>
+</details>
+<hr color="white">
+<details>
+  <summary><b>Number Field</b></summary>
+  <p>  <h3>Allows numeric values only.</h3>
+  Code: &lt;input type="number" name="age"&gt; <br>
+  Working: <br>
+  <font color="white"><input type="number" name="age"></font>
+  </p>
+</details>
+<hr>
+<details>
+  <summary><b>Checkbox</b></summary>
+  <p>  <h3>Lets user select multiple options (on/off)</h3>
+  Code: &lt;input type="checkbox" name="subscribe"&gt; <br>
+  Working: <br>
+  <font color="white"><input type="checkbox" name="subscribe"> Subscribe</font>
+  </p>
+</details>
+<hr>
+<details>
+  <summary><b>Radio Button</b></summary>
+  <p>  <h3>Lets user pick only one option from a group</h3>
+  Code: <br>
+  &lt;input type="radio" name="gender" value="male"&gt; Male <br>
+  &lt;input type="radio" name="gender" value="female"&gt; Female <br><br>
+  Working: <br>
+  <font color="white">
+  <input type="radio" name="gender" value="male"> Male
+  <input type="radio" name="gender" value="female"> Female
+  </font>
+  </p>
+</details>
+
+<hr >
+
+<details>
+  <summary><b>File Upload</b></summary>
+  <p>  <h3>Lets user upload a file from device</h3>
+  Code: &lt;input type="file" name="resume"&gt; <br>
+  Working: <br>
+  <font color="white"><input type="file" name="resume"></font>
+  </p>
+</details>
+
+<hr >
+
+<details>
+  <summary><b>Submit Button</b></summary>
+  <p>  <h3>Creates a button to submit the form</h3>
+  Code: &lt;input type="submit" value="Send"&gt; <br>
+  Working: <br>
+  <font color="white"><input type="submit" value="Send"></font>
+  </p>
+</details>
+
+<hr color="white">
+<details>
+  <summary><b>Normal Button</b></summary>
+  <p>  <h3>A general button (no default behavior).</h3>
+  Code: &lt;input type="button" value="Click Me"&gt; <br>
+  Working: <br>
+  <font color="white"><input type="button" value="Click Me"></font>
+  </p>
+</details>
+
+<hr color="white">
+<h2>
+<font color="red">Important Attributes</font> 
+</h2><hr>
+<ol>
+ <li>name → Gives the input a key, so when submitted, the server knows which field the data belongs to.</li> <br>
+ <li>value → Default or pre-filled value.</li> <br>
+ <li>placeholder → Grey text hint inside the field.</li> <br>
+ <li>required → Makes input mandatory.</li> <br>
+ <li>readonly → Field can’t be edited but can be copied.</li> <br>
+ <li>disabled → Field is inactive and not sent with the form.</li> <br>
+ <li>maxlength → Limits the number of characters.</li> <br>
+</ol>
+ <h2>
+    <hr>
+<font color="red">How Data is Sent 
+</font>
+</h2><hr>
+<br>
+When you put &lt;input&gt; inside a &lt;form&gt;, and hit submit: <br>
+- The browser collects all inputs with a "name". <br>
+- Creates a data package like: <br>
+&nbsp;&nbsp;username=John&amp;password=1234 <br>
+- Sends it to the server (to the URL in the form’s "action"). <br><br>
+
+Example: <br>
+&lt;form action="/submit" method="POST"&gt; <br>
+&nbsp;&nbsp;&lt;label&gt;Username:&lt;/label&gt; <br>
+&nbsp;&nbsp;&lt;input type="text" name="username" placeholder="Enter username" required&gt; <br><br>
+
+&nbsp;&nbsp;&lt;label&gt;Password:&lt;/label&gt; <br>
+&nbsp;&nbsp;&lt;input type="password" name="password" required&gt; <br><br>
+
+&nbsp;&nbsp;&lt;input type="submit" value="Login"&gt; <br>
+&lt;/form&gt; <br>
+</font></h2><br>
+<hr>
+<h1><font color="red">If we combine all this we get a proper form as shown below</font></h1>
+<center>
+<iframe src="http://127.0.0.1:5500/Day-4.html" width="500" height="500"></iframe>
+<center><h1><font color="white">If u still have doubts u can watch this video</font></h1></center>
+<center><iframe width="764" height="496" src="https://www.youtube.com/embed/a4j9R_DvZ8M" title="HTML Forms From Beginner to Advance | HTML Full Course #04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<h1><font color="white">Congrats!! u just completed day 4!!</font></h1>
+</center>
 </body>
 </html>

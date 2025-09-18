@@ -50,127 +50,212 @@
 </header>
 <hr>
 </header>
-<h1><font color="white">💻 Nested Lists & Tables</font></h1>
+<h1><font color="white">📁 Understanding File Path</font></h1>
 <hr>
 <center>
-<h1><font color="Red">What are Nested Lists?</font></h1>
+<h1><font color="Red">What are File Paths?</font></h1>
 </center><hr>
-<h2><font color="white">A nested list means putting one list inside another list.
-<br><br>
-It helps show sub-items under a main item.
-<br><br>
-Nested Lists are pretty much straight forward ur just using list tags inside list tags so we will go thorugh examples to understand them
-</font></h2>
-<h2><font color="red">Example 1</font></h2>
-<center>
-<img src="./images/nl1.jpeg" alt="nested" width="600px">
-
-<img src="./images/nl11.PNG" alt="vd" width="500px">
-<h2><font color="white">THe above example shows underordered lists inside unordered list
-</center>
-</font></h2><br>
-<hr>
-<h2><font color="red">Example 2</font></h2>
-<center>
-<img src="./images/nl2.jpeg" alt="nested" width="600px">
-
-<img src="./images/ul21.PNG" alt="vd" width="500px" height="600px">
-<h2><font color="white">THe above example shows Unordered list --> Unordered list --> Ordered list
-    <br><br>
-    in HTML you can place headings (h1–h6) inside list items (li).
-<br><br>
-This is useful when you want to highlight a category or title inside a list.
+<h2><font color="white">A file path is just a map or address that tells the computer where a file or folder is located in the storage system.<br>
 <br>
-Since list items can contain any HTML element (text, images, links, headings, etc.), headings fit naturally inside them.
-</center>
-</font></h2><br>
-<hr>
-<center><h1><font color="Red">Introduction To Tables 📑</font></h1></center><hr>
+Without the path, your computer wouldn’t know which file you mean, because there could be thousands of files with similar names in different places.<br>
+<br>
+Breaking it Down
+<br>
+File → the actual document, picture, program, etc.
+<br>
+Path → the directions to reach that file inside folders/directories.
+<br><br>
+It’s like:
+<br>
+File = your house
+<br>
+Path = the full directions (street, area, city) so others can find it.</font></h2>
+<hr><h1><font color="Red">Types of File Paths?</font></h1>
+</center><hr>
 <h2><font color="white">
+<h2><font color="red">Absolute path</font></h2> 
+<br>
+<center><img src="./images/absolute path.PNG" alt="image" width="800" height="500"></center>
+An absolute path is the complete address of a file or folder in a file system.
+<br>
+It always starts from the root directory (like C:\ in Windows or / in Linux/Unix).
+<Br>
+No matter where you currently are, an absolute path will always point to the same file/folder because it’s the full location.
+<br>
+</font></h2>
+<h2><font color="white">Structure of an Absolute Path
 <br><br>
-A table in HTML is used to arrange data in rows and columns (just like in MS Excel or a school timetable).
+An absolute path usually contains:
 <br><br>
-The <"table"> tag defines the table.
+Root directory (like C:\ or /)
 <br><br>
-Inside it, we use:
+Folder hierarchy (directories inside directories)
 <br><br>
-<"tr"> → Table Row
+File name (with extension)
 <br><br>
-<"td"> → Table Data (cell)
+📌 Example (Windows):
+<br>
+C:\Users\Akhil\Documents\notes.txt
 <br><br>
-<th> → Table Header (bold + centered by default)
+Here:
 <br><br>
-</font></h2><hr>
-<h1><font color="red">Table tag</font></h1>
-<hr>
-<h2><font color="white">The container for the entire table.
+C:\ → root directory (C drive)
 <br><br>
-Everything related to the table (rows, columns, headers, cells) must go inside</font></h2>
+Users → folder inside C drive
+<br><br>
+Akhil → folder inside Users
+<br><br>
+Documents → folder inside Akhil
+<br><br>
+notes.txt → the actual file</font></h2>
+<h1><font color="red">Relative path</font></h1>
+<h2><font color="white"><br>
+    <center><img src="./images/d to m.PNG" alt="nested" width="600px"></center>
+    <br>
+A relative path is the path to a file or folder starting from your current working directory (CWD), instead of from the root.
+<br>
+It depends on where you currently are in the file system.
+<br>
+If you move to a different directory, the same relative path might point to a different file.    <br>
+<br>
+📂 Suppose this is your project structure:
+<br><br>
+project/<br>
+│── index.html<br>
+│── about.html<br>
+│── images/<br>
+│    └── logo.png<br>
+<br>
+1. Same Folder
+<br><br>
+If the file is in the same folder as your HTML:
+<br><br>
+<!-- index.html and style.css in same folder -->
+<link rel="stylesheet" href="style.css">
+<br>
+2. Inside a Subfolder
+<br><br>
+If the file is inside another folder (like images/):
+<br>
+<br>
+3. Go Up One Level (..)
+<br>
+If your HTML is inside a folder but you want to access a file outside it:
+<br><br>
+project/<br>
+│── index.html<br>
+│── images/<br>
+│    └── logo.png<br>
+│── css/<br>
+     └── style.css<br>
+<br>
+<br>
+From inside css/style.css → back to root → go into images/:
+<br>
+background-image: url("../images/logo.png");
+<br>
+4. Current Folder (./)
+<br>
+Explicitly pointing to current folder:
 <br>
 <hr>
-<h1><font color="red">Table Row</font></h1>
-<hr>
-<h2><font color="white">Defines a row in the table.
+<h2><font color="Red">Boiler Plat Code 📑</font></h2><hr>
+<h3><font color="white">
+Boilerplate code means the standard, repeated code you often have to write in many programs before you can even start doing the real logic.
 <br><br>
-Inside a <"tr">, you place either <"td"> (data cells) or <"th"> (header cells).
+It’s like the foundation of a house:
 <br><br>
-Each <"tr"> = one horizontal row of the table.</font></h2>
+Every house needs walls, doors, windows → that’s boilerplate.
+<br><br>
+But the actual design (paint, furniture, style) is what makes your house unique → that’s your program’s logic.
+</font></h3><hr>
+<h2><font color="Red">Why do we need boiler plate though? </font></h2><hr>
+<h3><font color="white">Boilerplate code means the standard, repeated code you often have to write in many programs before you can even start doing the real logic.
 <br>
-<hr>
-<h1><font color="red">Table Data</font></h1>
-<hr>
-<h2><font color="white">Defines a cell in a row.
+It’s like the foundation of a house:
+<br>
+Every house needs walls, doors, windows → that’s boilerplate.
+<br>
+But the actual design (paint, furniture, style) is what makes your house unique → that’s your program’s logic.</font></h3>
+<center><img src="./images/boilerplate.PNG" alt="image" width="700px" height="400px"></center>
+<h2><font color="white">Now u might have many doubts about this code the first thaught would have been "UTF-8" lets explore what it means</font></h2>
+<hr><h2><font color="Red">UTF-8</font></h2><hr>
+<h3><font color="white">UTF stands for Unicode Transformation Format.
 <br><br>
-Contains the actual data (text, images, links, etc.).
+It’s a way of encoding characters (letters, numbers, symbols, emojis, etc.) into binary (0s and 1s) so that computers can store and exchange text consistently.</font></h3>
+<hr><h2><font color="Red">Why do we need it?</font></h2><hr>
+<h3><font color="white">Computers only understand binary (0s and 1s).
 <br><br>
-By default, content in <"td"> is left-aligned and normal-weight.</font></h2>
-<hr>
-<h1><font color="red">Table Header</font></h1>
-<hr>
-<h2><font color="white">Defines a header cell (like column headings).
+Early systems used ASCII (American Standard Code for Information Interchange).
 <br><br>
-Content inside <th> is bold and centered by default.
+ASCII = 128 characters → English letters, digits, symbols.
 <br><br>
-Usually placed in the first row or the first column.</font></h2>
+Example: A = 65, a = 97, ! = 33.
+<br><br>
+Problem: ASCII cannot handle non-English languages (like हिंदी, 中文, русский) or even emojis 😀.
+<br><br>
+So, we needed a universal character system → that’s Unicode.</font></h3>
+<br><br>
+<hr><h2><font color="red">UTF-8</font></h2><hr>
+<h3><font color="white">Most widely used (over 95% of websites).
+<br><br>
+Variable length:
+<br><br>
+English letters → 1 byte (same as ASCII).
+<br><br>
+Symbols / other languages → 2–4 bytes.
+<br><br>
+Efficient for English-heavy text.
+<br><br>
+Example:
+<br><br>
+A (U+0041) → 01000001 → 1 byte
+<br><br>
+€ (U+20AC) → 11100010 10000010 10101100 → 3 bytes
+<br><br>
+😊 (U+1F60A) → 11110000 10011111 10011000 10101010 → 4 bytes
+<br><br>
+👉 UTF-8 = compact & flexible, that’s why it dominates the web.
+<br><br>Now lets get into one of the main tags of HTML "DIV" tag
+</font></h3>
+<hr><h2><font color="red">What does <"div"> do?</font></h2><hr>
+<h3><font color="white"><"div"> stands for division.
+<br><br>
+It is a container tag in HTML, used to group other HTML elements together.
+<br><br>
+By itself, <"div"> does nothing visually — it doesn’t add style, color, or spacing.
+<br><br>
+Its real purpose is organizing content so you can apply CSS or JavaScript to that group.
+<br><br>
+Div basically is box where u can combine mulitple tags or div itself used for many purposes
 
-<center><img src="./images/table.png" alt="tabel" width="500px" height="300px"></center>
-<hr>
-<h2><font color="red"> Below are examples for representing tables in HTML <font color="white"></font></font></h2>
+</font></h3>
 
-</font></h2>
-<hr>
-<h2><font color="red">Example 1</font></h2>
-<center>
-<img src="./images/tabel 1.1.PNG" alt="nested" width="500px" height="700px">
-
-<img src="./images/Table1.2.png" alt="vd" width="500px">
-<h2><font color="white">The above example shows a baisc table with the table head tag and the other things
-</center>
-</font></h2><br>
-<hr>
-<h1><font color="Red">Rowspan & Colspan </font></h1><hr>
-<h2><font color="white"> 
-    <center><img src="https://holyfly.com/webdesign/images/tables6.gif" alt="rcspan"></center><br>
-    Rowspan, on the other hand, is when a single cell covers multiple rows. Imagine in the same timetable, you write "Monday" only once, <br><br>
-    but it applies to three rows (Math, Science, English). Rather than repeating “Monday” in each row, you merge those rows into one tall cell. <br><br>
-    That merging vertically is done with rowspan.  <br><br>
-    <br><br><br>
-    Colspan means "this cell should cover multiple columns.<br><br>
-    " Imagine a school timetable — you might have one heading called “Morning Session” that is meant to sit above several periods. <br><br>
-    Instead of writing “Morning Session” in every column, you merge those columns into one wider cell. <br><br>
-    That merging horizontally is done with colspan.<br><br>
-</font></h2>
-<center><img src="https://github.com/coderarmy-notes/mern-stack-course/blob/main/01HTML/Day02/Table/Table4.png?raw=true" alt="image" width="700px" height="400px"></center>
-<h2><font color="white">
-    The above example shows the combination of row and colspan in one table
-    <br><br>
-    The below example shows a bit more complex table structre but we are just using row and colspan<br>
-    <center><img src="https://github.com/coderarmy-notes/mern-stack-course/blob/main/01HTML/Day02/Table/Table5.png?raw=true" alt="" width="700px" height="400px"></center>
-
-</center>
-<center><h1><font color="white">If u still have doubts u can watch this video</font></h1></center>
-<center><iframe width="764" height="496" src="https://www.youtube.com/embed/AJ4E1zf5tQs" title="HTML Nested Lists &amp; Tables: The Complete Guide with 10 Detailed Examples | HTML Full Course #02" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<h1><font color="white">Congrats!! u just completed day 3!!</font></h1>
+<center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdldx40TW9IznTi6_uUO4lju80h4eiEAx5VQ&s" alt="image" width="700px" height="300px"></center>
+<br>
+<center><img src="./images/div.PNG" alt=""></center>
+<hr><h2><font color="red">Class & id </font></h2><hr>
+<h3><font color="white">1. Class in HTML/CSS
+<br><br>
+In HTML, the class attribute is used to give an element a name (label).
+<br><br>
+Then in CSS, you can style all elements with that class.
+<br><br>
+Multiple elements can share the same class → that’s how you apply the same style to many things.cally is box where u can combine mulitple tags or div itself used for many purposes
+<br><br>
+2. Id in HTML/CSS
+<br><br>
+The id attribute is a unique identifier for a single element.
+<br><br>
+Each id should be used only once per page.
+<br><br>
+Useful for targeting one specific element with CSS or JavaScript.
+<br><br>
+In CSS, you select ids with a hash (#).
+</font></h3>
+<center><img src="./images/class id.png" alt="class" width="700" height="300"></center>
+<center><hr><h2><font color="white">watch the video if u still didn't get it 😁</font></h2><hr>
+<iframe width="764" height="496" src="https://www.youtube.com/embed/k78lNSAB8VY" title="File Path in HTML | HTML BoilerPlate Code | DIV + Class + ID | HTML Full Course #03" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><h1><font color="white">Congrats!! u just completed day 4!!</font></h1>
 </center>
 </body>
 </html>
